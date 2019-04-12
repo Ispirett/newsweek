@@ -40,11 +40,10 @@
     <div class="wrapper">
       <!-- header mobile -->
 
-      <div class="header-fixed">
+      <div class="header-fixed" id="nav-fix">
         <div>
           <svg
             version="1.1"
-            id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px"
@@ -71,7 +70,7 @@
       <!-- header -->
       <header class="header">
         <div class="header-left">
-          <date>Tue, Apr 09, 2019</date>
+          <span>Tue, Apr 09, 2019</span>
         </div>
         <div class="header-center">
           <a href="">
@@ -126,7 +125,7 @@
 
       <!-- body-->
       <main class="container-fluid section-main bg-white ">
-        <div class="row">
+        <div class="row section-one">
           <!-- section-main-left -->
           <section class="col-sm-4 section-left ">
             <h5 class="padding-left-small padding-top-small">
@@ -167,7 +166,7 @@
               </figCaption>
             </figure>
 
-            <figure class="small-width  figure ">
+            <figure class="figure ">
               <img
                 src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/04/09/ag-barr-testimony.jpg"
                 alt=""
@@ -209,7 +208,8 @@
             <div class="small-width bg-white small-height">
               <figure class="small-width figure ">
                 <img
-                  src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/04/09/ag-barr-testimony.jpg"
+                  class="section-center-img"
+                  src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2019/04/12/julian-assange-westminster-magistrates-london.jpg"
                   alt=""
                 />
                 <figCaption class="section-center-1">
@@ -392,7 +392,7 @@
           <section class="col-sm-3 section-right-mobile  ">
             <h5 class="padding-top-small">OPINION</h5>
             <div class="small-width bg-white small-height">
-              <div class=" container">
+              <div>
                 <figure class="section-right-figure">
                   <img
                     src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-pedro-rios.png"
@@ -604,13 +604,13 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-3   section-two-ad-special ">
+            <div class="col-sm-3 section-two-ad-special ">
               <div class="side-padding bg-white ">
                 <div>
                   <a href="">
                     <img
                       class="section-two-ad-img-sepcial "
-                      src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_xs/public/2019/04/02/20190412cover1800x2400.jpg"
+                      src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/embed_tablet/public/2019/04/09/20190419cover1800-x-2400.jpg"
                       alt="image"
                     />
                   </a>
@@ -677,6 +677,7 @@
 
         <!-- Section-two second half-->
         <section class="section-two">
+          <h2 class="hidden">Downloads</h2>
           <div class="row">
             <div class="col-sm-3 section-two-ad ">
               <div class="side-padding bg-white  ">
@@ -1309,7 +1310,7 @@
         <section class="section-five border-none">
           <h2 class="text text-danger">U.S.</h2>
           <div class="row">
-            <div class="col-sm-4 section-four-article">
+            <div class="col-sm-4 section-four-article ">
               <a href=""
                 ><img
                   src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/04/11/oprah-winfrey.jpg"
@@ -1332,7 +1333,7 @@
             <div class="col-sm-4 section-five-article">
               <figure class="section-right-figure">
                 <img
-                  src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/04/03/costuming-crown-14.jpg"
+                  src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/04/11/redmond.jpg"
                   alt="image"
                 />
                 <figcaption>
@@ -1382,7 +1383,7 @@
           <h2 class="text text-danger ">SUBSCRIBE</h2>
 
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 section-six-row">
               <div class="section-six-ad">
                 <figure class="section-six-ad-1">
                   <img
@@ -1424,13 +1425,11 @@
                       Website access
                     </p>
                   </figcaption>
-
-                  <a href="">SUBSCRIBE</a>
                 </figure>
               </div>
             </div>
 
-            <div class="col-sm-4"></div>
+            <div class="col-sm-4 section-placeholder"></div>
 
             <!-- aside -->
             <div class="col-sm-4 section-six-article">
@@ -1515,7 +1514,7 @@
             <div class="col-sm-5 footer-header">
               <svg
                 version="1.1"
-                id="Layer_1"
+                
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
@@ -1583,5 +1582,20 @@
         </footer>
       </main>
     </div>
+
+    <script>
+      window.onscroll = function nav() {
+        let nav = document.getElementById("nav-fix");
+        if (
+          document.body.scrollTop > 90 ||
+          document.documentElement.scrollTop > 0
+        ) {
+          nav.style.top = "0";
+          nav.style.display = "block";
+        } else {
+          nav.style.top = "-50px";
+        }
+      };
+    </script>
   </body>
 </html>
