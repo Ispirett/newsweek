@@ -7,6 +7,7 @@
   --text-bold: bold;
   --text-light: 100;
   --small-height: 50em;
+  --main-color: #e5e5e5;
 }
 
 body {
@@ -23,6 +24,9 @@ a:hover {
 }
 
 /* utilites */
+.border-none {
+  border: none !important;
+}
 .hidden {
   position: absolute;
   clip: rect(60px 60px 60px 60px);
@@ -55,7 +59,9 @@ a:hover {
 .small-height {
   height: var(--small-height);
 }
-
+.gutter-tiny {
+  margin-top: 0.5em;
+}
 .gutter-top-small {
   margin-top: 2em;
 }
@@ -68,67 +74,155 @@ a:hover {
   padding-top: 1em;
 }
 
-.side-padding {
-}
 .text-bold {
   font-weight: 600;
 }
 /* section header */
+
+.header-fixed {
+  display: none;
+  background: var(--bg-red);
+  position: fixed;
+  height: 2.5rem;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-fixed svg {
+  text-align: start;
+  width: 8rem;
+  fill: white;
+}
+
+.header-fixed div:first-of-type {
+  padding: 0.3rem 0.5rem 0 0.5rem;
+}
+
+.header-fixed .header-right a:first-of-type {
+  font-size: 0.8em !important;
+  padding: 0.5rem !important;
+}
+
+.header-fixed .header-right a:last-of-type {
+  margin-top: 4em !important;
+  font-size: 0.8em !important;
+  padding: 0.4rem !important;
+}
+.header-fixed .header-right i {
+  padding-left: 0.3rem !important;
+}
+
 .header {
   background-color: var(--bg-red);
 }
 
 .header-center {
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   padding-top: 2em;
   text-align: center;
   width: 25rem;
 }
 
 .header-left {
-  padding-top: 3em;
-  float: left;
+  color: white;
+  position: relative;
+  top: 6rem;
+  padding-left: 1em;
+}
+.header-left date {
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .header-right {
-  padding-top: -3em;
   float: right;
-  margin-top: -1.8em;
+  position: relative;
+  bottom: 2em;
+  padding-right: 1rem;
 }
+
+.header-right a:first-of-type {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding-right: 0.5rem;
+}
+
+.header-right a:first-of-type:hover {
+  color: white;
+  font-weight: 900;
+}
+
+.header-right a:last-of-type {
+  font-weight: 900;
+  font-size: 1rem;
+  color: #f72210;
+  background: #f4f5f6;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
 .header svg {
   width: 100%;
-  color: var(--text-white);
+  fill: var(--text-white);
+  margin: 0 auto 0auto;
 }
 
 .nav {
   clear: both;
 
   margin-top: 0.5em;
-  border-bottom: 1px solid var(--text-grey);
+  border-bottom: 1px solid var(--main-color);
   background-color: var(--text-white);
 }
 
 .nav ul {
-  padding: 1rem 0 0 0;
+  background-color: var(--text-white);
+  position: relative;
+  bottom: 1rem;
+  padding: 1rem 2rem 1rem 0;
+  border-radius: 0 2em 0 0;
+  margin-bottom: -1em;
 }
 
 .nav ul li {
   display: inline-block;
-  border-right: 1px solid var(--text-grey);
+  border-right: 1px solid var(--main-color);
+  padding-left: 0.5rem;
 }
 
 .nav ul li a {
   text-decoration: none;
-  padding: 2rem 2.5rem 1rem 2.5rem;
-  font-size: 1em;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: 1.2em;
   font-weight: 900;
   color: black;
 }
 
-.nav ul li a {
-  text-decoration: underline;
+.nav ul li a:hover {
+  color: #f72210;
 }
 
+input[type="text"] {
+  width: 5rem;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  transition: width 1s ease-in-out;
+}
+
+input[type="text"]:focus {
+  width: 50em;
+}
+
+.header-input-label {
+  width: 3rem;
+  padding: 0 1rem;
+}
 /*section main */
 .seperator {
   padding: 0 1em 0 1em !important;
@@ -467,9 +561,9 @@ a:hover {
 /* section-four*/
 .section-four {
   margin-top: 2em;
-}
-
-.section-four-article {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 3rem;
 }
 
 .section-four-article a:last-of-type {
@@ -483,11 +577,180 @@ a:hover {
   border-bottom: 1px solid red;
 }
 
+/* section-five */
+
+.section-five {
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 1rem;
+}
+
+.section-five > h2 {
+  color: #f72210 !important;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.section-five-article figure {
+  border: none;
+}
+
+.section-five-article figure img {
+  width: 8rem;
+  height: 5rem;
+}
+
+.section-five-article figcaption {
+  width: 16rem;
+  padding-right: 2em;
+  margin-left: 0.2em;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.section-five-article figcaption > h5 {
+  font-size: 1em;
+}
+
+/*section-six */
+
+.section-six h2 {
+  color: #f72210 !important;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.section-six-ad {
+  background: #f1f1f1;
+  padding: 0.2em;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 2em;
+}
+.section-six-ad-1 {
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+.section-six-ad-1 > img {
+  padding-top: -2em !important;
+  display: inline-block;
+}
+
+.section-six-ad-1 > figcaption {
+  display: inline-block;
+}
+
+.section-six-ad-1 > figcaption > p {
+  width: 15em;
+}
+
+.special {
+  position: relative;
+  top: 2em;
+}
+.section-six-ad-2 figcaption {
+  margin-top: 1em;
+}
+
+.section-six-article h4 {
+  font-size: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-six-article figure {
+  border: none;
+}
+
+.section-six-article figure img {
+  width: 6rem;
+  height: 5rem;
+}
+
+.section-six-article figcaption {
+  width: 18.5rem;
+  padding-right: 1em;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.section-six-article figcaption > h5 {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+/* footer */
+
+.footer-one {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-bottom: 0.5em !important;
+}
+
+.social-links {
+  margin-top: 1.2rem;
+}
+
+.social-links i {
+  color: grey;
+  padding: 0.2rem 0.5rem;
+}
+
+.social-links i:hover {
+  color: blue;
+}
+
+.footer-header svg {
+  fill: #f72210;
+  width: 16em;
+}
+.footer-header p {
+  display: inline-block;
+  position: relative;
+  top: 1em;
+  font-size: 0.8rem;
+}
+
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.footer-links ul > li > a {
+  padding: 0em 1rem;
+  border-right: 1px solid #e5e5e5;
+  color: grey;
+  font-size: 0.8em;
+}
+
+.footer-links ul > li > a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 1310px) {
   .wrapper {
     width: 100%;
   }
 }
+@media (max-width: 990px) {
+  .header {
+    display: none;
+  }
+  .header-fixed {
+    display: block;
+  }
+}
+
 @media (max-width: 800px) {
   .section-right-mobile {
     margin-top: 110em;
