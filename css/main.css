@@ -741,19 +741,15 @@ input[type="text"]:focus {
   .wrapper {
     width: 100%;
   }
-
-  .section-center {
-    padding-bottom: 20rem;
-  }
 }
 
 @media (max-width: 1023px) {
-  .section-right-mobile {
-    margin-bottom: 60rem;
-  }
-
   .section-placeholder {
     display: none;
+  }
+
+  .section-two {
+    margin-top: 2em;
   }
 
   .section-six-article {
@@ -774,22 +770,20 @@ input[type="text"]:focus {
   }
 
   .section-six-row {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 990px) {
+  .section-right-mobile {
+    display: block;
+  }
+
   .header {
     display: none;
   }
   .header-fixed {
-    display: block;
-  }
-}
-
-@media (max-width: 800px) {
-  .section-right-mobile {
     display: block;
   }
 }
@@ -825,11 +819,8 @@ input[type="text"]:focus {
 }
 
 @media (max-width: 780px) {
-  .section-center {
-    padding-bottom: 55rem;
-  }
   .section-center-img {
-    height: auto !important;
+    height: auto;
   }
   .section-center,
   .section-center-2 {
@@ -845,13 +836,10 @@ input[type="text"]:focus {
 
   .section-two-ad-special,
   .section-two-ad {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
-  .section-two-pad-top {
-    margin-top: 15em;
-  }
   .section-two-header {
     justify-content: start;
     width: 100%;
@@ -865,8 +853,8 @@ input[type="text"]:focus {
   }
 
   .section-four-article {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .section-right-center {
@@ -888,11 +876,5 @@ input[type="text"]:focus {
   .section-five-article > figure > img {
     width: 100%;
     height: 10rem;
-  }
-}
-
-@media (max-width: 590px) {
-  .section-center {
-    padding-bottom: 70rem;
   }
 }

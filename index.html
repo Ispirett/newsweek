@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/main.css" />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
     <script
@@ -33,6 +33,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -205,7 +206,7 @@
           <!-- section-center -->
           <section class="col-sm-5  section-center ">
             <h5 class="padding-left-small padding-top-small">TOP STORY</h5>
-            <div class="small-width bg-white small-height">
+            <div>
               <figure class="small-width figure ">
                 <img
                   class="section-center-img"
@@ -391,7 +392,7 @@
           <!--section-right-->
           <section class="col-sm-3 section-right-mobile  ">
             <h5 class="padding-top-small">OPINION</h5>
-            <div class="small-width bg-white small-height">
+            <div class="s bg-white">
               <div>
                 <figure class="section-right-figure">
                   <img
@@ -597,7 +598,7 @@
         <!-- end of section-one -->
 
         <!-- section two -->
-        <section class="section-two section-two-pad-top ">
+        <section class="section-two ">
           <div class="section-two-header ">
             <span></span>
             <h2>IN THE MAGAZINE</h2>
@@ -1583,18 +1584,21 @@
     </div>
 
     <script>
-      window.onscroll = function nav() {
-        let nav = document.getElementById("nav-fix");
-        if (
-          document.body.scrollTop > 90 ||
-          document.documentElement.scrollTop > 0
-        ) {
-          nav.style.top = "0";
-          nav.style.display = "block";
-        } else {
-          nav.style.top = "-50px";
-        }
-      };
+      if (window.screen.width > 980) {
+        window.onscroll = function nav() {
+          let nav = document.getElementById("nav-fix");
+
+          if (
+            document.body.scrollTop > 90 ||
+            document.documentElement.scrollTop > 0
+          ) {
+            nav.style.top = "0";
+            nav.style.display = "block";
+          } else {
+            nav.style.top = "-50px";
+          }
+        };
+      }
     </script>
   </body>
 </html>
