@@ -25,7 +25,7 @@ a:hover {
 
 /* utilites */
 .border-none {
-  border: none;
+  border: none !important;
 }
 .hidden {
   position: absolute;
@@ -34,7 +34,7 @@ a:hover {
 
 .wrapper {
   margin: 0 auto;
-  width: 82rem;
+  width: 74rem;
 }
 
 .flex-row {
@@ -128,7 +128,10 @@ a:hover {
 }
 
 .nav ul {
+  width: 95%;
   background-color: var(--text-white);
+  display: flex;
+  flex-direction: row;
   position: relative;
   bottom: 1rem;
   padding: 1rem 2rem 1rem 0;
@@ -136,21 +139,28 @@ a:hover {
 }
 
 .nav ul li {
-  display: inline-block;
+  width: 100%;
+  list-style: none;
   border-right: 1px solid var(--main-color);
   padding-left: 0.5rem;
 }
 
 .nav ul li a {
+  width: 100%;
   text-decoration: none;
-  padding: 1rem 1rem 1rem 1rem;
-  font-size: 1.2em;
+  margin: 1rem 3% 1rem 1rem;
+  font-size: 1em;
   font-weight: 900;
   color: black;
 }
 
 .nav ul li a:hover {
   color: #f72210;
+}
+
+.nav-search {
+  display: flex;
+  flex-direction: row;
 }
 
 input[type="text"] {
@@ -169,6 +179,7 @@ input[type="text"]:focus {
   width: 3rem;
   padding: 0 1rem;
 }
+
 /*section main */
 
 .section-left {
@@ -294,9 +305,8 @@ input[type="text"]:focus {
 
 .newsletter {
   background: #f4f5f6;
-  width: 90%;
+  width: 18rem;
   margin-left: 1em;
-  border: 1px solid #e5e5e5;
   height: 10em;
 }
 
