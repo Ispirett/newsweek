@@ -148,7 +148,7 @@ a:hover {
 .nav ul li a {
   width: 100%;
   text-decoration: none;
-  margin: 1rem 3% 1rem 1rem;
+  margin: 1rem 3% 1rem 15%;
   font-size: 1em;
   font-weight: 900;
   color: black;
